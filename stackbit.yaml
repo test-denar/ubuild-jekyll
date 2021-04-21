@@ -1,0 +1,193 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+models:
+  page_1:
+    type: page
+    label: Page 1
+    match:
+      - FORESTRY-README.md
+    fields: []
+  page_2:
+    type: page
+    label: Page 2
+    match: '*'
+    exclude:
+      - FORESTRY-README.md
+    fields:
+      - name: layout
+        type: string
+      - name: title
+        type: string
+      - name: date
+        type: datetime
+        label: Date
+      - name: page_sections
+        type: list
+        label: Page Sections
+        items:
+          type: model
+          models:
+            - B1Q1ruO2Q2
+            - 0HzuHESakE
+            - 4NUXWUbrNK
+            - 6T2Nde7XRu
+            - GpzOF4JT5U
+  menus:
+    type: data
+    label: Menus
+    file: menus.yml
+    fields:
+      - type: list
+        name: main
+        label: Main
+        items:
+          type: object
+          fields:
+            - type: string
+              name: identifier
+              label: Identifier
+            - type: string
+              name: url
+              label: Url
+            - type: number
+              name: weight
+              label: Weight
+              subtype: int
+            - type: string
+              name: title
+              label: Title
+  B1Q1ruO2Q2:
+    type: object
+    label: Object 1
+    fields:
+      - name: template
+        type: string
+      - name: block
+        type: string
+      - name: content
+        type: markdown
+      - name: headline
+        type: string
+        label: Headline
+  0HzuHESakE:
+    type: object
+    label: Object 2
+    fields:
+      - type: string
+        name: template
+        label: Template
+      - type: string
+        name: block
+        label: Block
+      - type: image
+        name: image
+        label: Image
+      - type: string
+        name: caption
+        label: Caption
+      - type: string
+        name: slug
+        label: Slug
+  4NUXWUbrNK:
+    type: object
+    label: Object 3
+    fields:
+      - name: template
+        type: string
+      - name: block
+        type: string
+      - name: slug
+        type: string
+      - name: headline
+        type: markdown
+      - name: content
+        type: markdown
+      - name: media_alignment
+        type: string
+      - name: media
+        type: object
+        fields:
+          - name: image
+            type: string
+          - name: alt_text
+            type: string
+  6T2Nde7XRu:
+    type: object
+    label: Object 4
+    fields:
+      - type: string
+        name: template
+        label: Template
+      - type: string
+        name: block
+        label: Block
+      - type: string
+        name: slug
+        label: Slug
+      - type: markdown
+        name: headline
+        label: Headline
+      - type: markdown
+        name: content
+        label: Content
+      - type: object
+        name: cta
+        label: Cta
+        fields:
+          - type: boolean
+            name: enabled
+            label: Enabled
+          - type: string
+            name: url
+            label: Url
+          - type: string
+            name: button_text
+            label: Button Text
+      - type: object
+        name: image
+        label: Image
+        fields:
+          - type: image
+            name: image
+            label: Image
+          - type: string
+            name: alt_text
+            label: Alt Text
+      - type: image
+        name: background_image
+        label: Background Image
+  GpzOF4JT5U:
+    type: object
+    label: Object 5
+    fields:
+      - type: string
+        name: template
+        label: Template
+      - type: string
+        name: block
+        label: Block
+      - type: image
+        name: logo
+        label: Logo
+      - type: list
+        name: navigation
+        label: Navigation
+        items:
+          type: object
+          fields:
+            - name: link
+              type: string
+            - name: link_text
+              type: string
+      - type: object
+        name: cta
+        label: Cta
+        fields:
+          - type: string
+            name: url
+            label: Url
+          - type: string
+            name: button_text
+            label: Button Text
